@@ -34,9 +34,4 @@ import MainHeader from "@/components/Main/MainHeader.vue";
 	width: 800px;
   }
 }
-
-
-
-
-
 </style>
