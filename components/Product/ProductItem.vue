@@ -32,9 +32,10 @@ import { useProductStore } from "~/store/store";
 
 const store = useProductStore;
 
-
 const products = computed(() => store.state.cardProduct);
+	
 const sum = (product) => (product.price * product.quantity).toLocaleString();
+	
 const deleteCard = (id) => store.commit("deleteCard", id);
 const incrementQuantity = (id) => store.commit("incrementProductQuantity", id);
 const decrementQuantity = (id) => store.commit("decrementProductQuantity", id);
