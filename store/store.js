@@ -50,6 +50,9 @@ export const useProductStore = createStore(
 					state.counter--;
 				}
 			},
+			clearCart(state) {
+				state.cardProduct = []
+			},
 			fetchOrder(state, order) {
 				state.order = order;
 			}

@@ -4,7 +4,7 @@
 			<h1 class="main__title">Ваша корзина</h1>
 			<span class="main__text">{{ productCount }} товара</span>
 		</div>
-		<a class="main__link" href="">Очистить корзину</a>
+		<a @click="clearCart" class="main__link" href="">Очистить корзину</a>
 	</div>
 </template>
 
@@ -15,6 +15,12 @@ import { useProductStore } from "~/store/store.js";
 const store = useProductStore;
 
 const productCount = computed(() => store.getters.productCount);
+
+const clearCart = (e) => {
+	e.preventDefault();
+	
+	store.commit("clearCart");
+};
 
 </script>
 
